@@ -1,188 +1,911 @@
-
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ShuttleX – Corporate Shuttle Service</title>
-  <meta name="description" content="ShuttleX provides safe, punctual, GPS-tracked employee shuttle services across Hyderabad’s tech corridor. Book daily or monthly passes.">
-  <ssets/logo.png
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="cons -->
-  https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css
-
-  <style>
-    :root {
-      --brand: #0a66c2;
-      --accent: #22c55e;
-    }
-    body { scroll-behavior: smooth; }
-    .navbar.sticky-shadow { box-shadow: 0 0.5rem 1rem rgba(0,0,0,.08); }
-    .hero { background: linear-gradient(135deg, rgba(10,102,194,.12), rgba(34,197,94,.1)); padding: 80px 0; }
-    .stat { text-align: center; border: 1px solid #ddd; border-radius: 12px; padding: 16px; }
-    .stat h3 { font-size: 2rem; font-weight: 800; color: var(--brand); }
-    #backToTop { position: fixed; bottom: 20px; right: 20px; display: none; }
-  </style>
-</head>
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
-
-<!-- Navbar -->
-<nav id="mainNav" class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-  <div class="container">
-    #home
-      <img src="assets/logo.png" alt="ShuttleX" style="widtha>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
-      href="#pricing">Pricing</a></li>
-        <li class="nav-item"><a class="nav-link"      <li class="nav-item">
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
-        </li>
-        <li class="nav-item">
-          <button id="themeToggle" class="btn btn-outline-secondary"><i class="bi bi-moon-stars"></i></button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!---center">
-    <h1 class="fw-bold">Safe, On-Time Employee Transport</h1>
-    <p class="lead">GPS-tracked shuttles connecting Hyderabad’s tech corridor. Verified drivers, SLA-backed schedules.</p>
-    <div class="d-flex justify-content-center gap-2 mt-3">
-      <a href="#routes" class="btn btn-outlineutes</a>
-      bi-ticket"></i> Book Now</button>
-    </div>
-    <div class="row row-cols-3 g-3 mt-4">
-      <div class="col"><div class="stat"><h3 class="counter" data-target="98.7" data-suffix="%">0</h3><p>On-time</p></div></div>
-      <div class="col"><div class="stat"><h3 class="counter" data-target="50" data-suffix="+">0</h3><p>Daily Trips</p></div></div>
-      <div class="col"><div class="stat"><h3 class="counter" data-target="4.8" data-suffix="★">0</h3><p>Rating</p></div></div>
-    </div>
-  </div>
-</header>
-
-<!-- Services -->
-<section id="services" class="py-5">
-  <div class="container text-center">
-    <h2 class="fw-bold mb-4">Our Services</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col"><div class="card h-100"><div class="card-body"><h5>Daily Commute</h5><p>Fixed routes aligned with shift timings.</p></div></div></div>
-      <div class="col"><div class="card h-100"><div class="card-body"><h5>Event Transport</h5><p>On-demand coaches for offsites and townhalls.</p></div></div></div>
-      <div class="col"><div class="card h-100"><div class="card-body"><h5>Safety First</h5><p>Verified drivers, monthly checks, emergency helpline.</p></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- Routes -->
-<section id="routes" class="py-5 bg-body-secondary">
-  <div class="container text-center">
-    <h2 class="fw-bold mb-4">Routes</h2>
-    <p>Kukatpally → Hitech City | Gachibowli → Financial District</p>
-    <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED" width="100%" height="Pricing -->
-<section id="pricing" class="py-5">
-  <div class="container text-center">
-    <h2 class="fw-bold mb-4">Pricing</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col"><div class="card"><div class="card-body"><h5>Daily Pass</h5><p class="price">₹149/day</p></div></div></div>
-      <div class="col"><div class="card border-primary"><div class="card-body"><h5>Monthly Pass</h5><p class="price">₹2,999/month</p></div></div></div>
-      <div class="col"><div class="card"><div class="card-body"><h5>Event Shuttle</h5><p>On Request</p></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="py-5 bg-body-secondary">
-  <div class="container">
-    <h2 class="fw-bold text-center mb-4">FAQs</h2>
-    <div class="accordion" id="faqAccordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">How do I track my shuttle?</button></h2>
-        <div id="faq1" class="accordion-collapse collapse show"><div class="accordion-body">We share a live tracking link via WhatsApp or email before departure.</div></div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">Can we customize routes?</button></h2>
-        <div id="faq2" class="accordion-collapse collapse"><div class="accordion-body">Yes, for enterprise clients we design custom routes and SLAs.</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="py-4 text-center bg-dark text-light">
-  <p>© <span id="year"></span> ShuttleX | ops@shuttlex.in | +91-XXXXXXXXXX</p>
-</footer>
-
-<!-- Back to Top -->
-<button id="backToTop" class="btn btn-primary rounded-circle"><i class="bi bi-chevron-up"></i></button>
-
-<!-- Booking Modal -->
-<div class="modal fade" id="bookingModal" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      https://formspree.io/f/yourFormId
-        <div class="modal-header"><h5 class="modal-title">Book a Seat</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
-        <div class="modal-body">
-          <div class="row g-3">
-            <div class="col-md-6"><input type="text" name="name" class="form-control" placeholder="Full Name" required></div>
-            <div class="col-md-6"><input type="email" name="email" class="form-control" placeholder="Work Email" required></div>
-            <div class="col-md-6"><input type="text" name="company" class="form-control" placeholder="Company" required></div>
-            <div class="col-md-6"><input type="tel" name="phone" class="form-control" placeholder="Phone"></div>
-            <div class="col-md-6"><select name="route" class="form-select" required><option value="">Select Route</option><option>Route A</option><option>Route B</option></select></div>
-            <div class="col-md-6"><select name="trip" class="form-select" required><option value="">Select Trip</option><option>Morning</option><option>Evening</option></select></div>
-            <div class="col-12"><textarea name="notes" class="form-control" rows="3" placeholder="Special requirements"></textarea></div>
-          </div>
-        </div>
-        <div class="modal-footer"><button type="submit" class="btn btn-primary">Submit</button></div>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- Bootstrap JS -->
-<script/cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js</script>
-<script>
-  // Navbar shadow
-  const nav = document.getElementById('mainNav');
-  window.addEventListener('scroll', () => nav.classList.toggle('sticky-shadow', window.scrollY > 10));
-
-  // Back to top
-  = window.scrollY > 500 ? 'inline-flex' : 'none');
-  backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-  // Dynamic year
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Theme toggle
-  const themeToggle = document.getElementById('themeToggle');
-  themeToggle.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-bs-theme');
-    const next = current === 'light' ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-bs-theme', next);
-    themeToggle.innerHTML = next === 'dark' ? '<i class="bi bi-brightness-high"></i>' : '<i class="bi bi-moon-stars"></i>';
-  });
-
-  // Animated counters
-  const counters = document.querySelectorAll('.counter');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const target = parseFloat(el.dataset.target);
-      const suffix = el.dataset.suffix || '';
-      let start = 0;
-      const step = () => {
-        start += target / 50;
-        if (start < target) {
-          el.textContent = start.toFixed(target % 1 ? 1 : 0) + suffix;
-          requestAnimationFrame(step);
-        } else {
-          el.textContent = target + suffix;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShuttleX - Corporate Shuttle Service | Hyderabad IT Corridor</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <style>
+        /*============================================
+        * GENERAL STYLES
+        =============================================*/
+        :root {
+            --primary: #0d6efd;
+            --primary-dark: #0b5ed7;
+            --secondary: #6c757d;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --shuttle-blue: #1d4ed8;
+            --shuttle-orange: #f59e0b;
+            --transition-speed: 0.3s;
         }
-      };
-      step();
-      observer.unobserve(el);
-    });
-  }, { threshold: 0.6 });
-  counters.forEach(c => observer.observe(c));
-</script>
-</body>
-</html>
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px; /* Accounts for the fixed navbar */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color var(--transition-speed);
+        }
+
+        .text-shuttle-blue {
+            color: var(--shuttle-blue);
+        }
+        
+        .bg-shuttle-blue {
+            background-color: var(--shuttle-blue);
+        }
+        
+        .text-shuttle-orange {
+            color: var(--shuttle-orange);
+        }
+        
+        .bg-shuttle-orange {
+            background-color: var(--shuttle-orange);
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--shuttle-orange);
+            bottom: -10px;
+            left: 25%;
+        }
+
+        /* Button Styles */
+        .btn-shuttle {
+            background-color: var(--shuttle-blue);
+            color: white;
+            border: none;
+            transition: all var(--transition-speed);
+            font-weight: 600;
+        }
+
+        .btn-shuttle:hover, .btn-shuttle:focus {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Card hover effect */
+        .card-hover {
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animation for elements */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /*============================================
+        * NAVBAR STYLES
+        =============================================*/
+        .navbar {
+            transition: all var(--transition-speed);
+            padding: 15px 0;
+        }
+
+        .navbar.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .navbar-brand span {
+            color: var(--shuttle-orange);
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--dark);
+            font-weight: 600;
+            margin: 0 10px;
+            transition: color var(--transition-speed);
+        }
+
+        [data-bs-theme="dark"] .navbar-nav .nav-link {
+            color: var(--light);
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--shuttle-orange);
+        }
+
+        /*============================================
+        * HERO SECTION STYLES
+        =============================================*/
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(29, 78, 216, 0.85), rgba(29, 78, 216, 0.85)), 
+                        url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YnVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 180px 0 100px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .counter-box {
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-top: 30px;
+        }
+
+        .counter-box .counter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--shuttle-orange);
+        }
+
+        .counter-box h5 {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /*============================================
+        * SERVICES SECTION STYLES
+        =============================================*/
+        .service-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .service-card .card-body {
+            padding: 25px;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--shuttle-blue);
+            margin-bottom: 20px;
+        }
+
+        /*============================================
+        * ROUTES SECTION STYLES
+        =============================================*/
+        .routes-section {
+            background-color: var(--light);
+        }
+        
+        [data-bs-theme="dark"] .routes-section {
+            background-color: rgba(33, 37, 41, 0.7);
+        }
+
+        .route-card {
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .route-card .route-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .route-card .route-header .route-letter {
+            width: 60px;
+            height: 60px;
+            background-color: var(--shuttle-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-right: 20px;
+        }
+
+        .route-stops {
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .route-stop {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .route-stop:before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: var(--shuttle-blue);
+            border-radius: 50%;
+            left: 0;
+            top: 5px;
+        }
+
+        .route-stop:after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--shuttle-blue);
+            top: 18px;
+            bottom: -15px;
+            left: 5px;
+        }
+
+        .route-stop:last-child:after {
+            display: none;
+        }
+
+        /*============================================
+        * SCHEDULE SECTION STYLES
+        =============================================*/
+        .schedule-section .nav-pills .nav-link {
+            border-radius: 50px;
+            padding: 10px 20px;
+            margin: 5px;
+            font-weight: 600;
+        }
+
+        .schedule-section .nav-pills .nav-link.active {
+            background-color: var(--shuttle-blue);
+        }
+
+        .schedule-table {
+            margin-top: 30px;
+        }
+
+        .schedule-table th {
+            background-color: var(--shuttle-blue);
+            color: white;
+            font-weight: 600;
+        }
+
+        .schedule-row {
+            transition: all var(--transition-speed);
+        }
+
+        .schedule-row:hover {
+            background-color: rgba(29, 78, 216, 0.05);
+        }
+
+        /*============================================
+        * PRICING SECTION STYLES
+        =============================================*/
+        .pricing-switch {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .pricing-switch .form-check-input {
+            width: 60px;
+            height: 30px;
+            margin: 0 10px;
+        }
+
+        .pricing-card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all var(--transition-speed);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card .card-header {
+            background-color: var(--shuttle-blue);
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .pricing-card .card-header h3 {
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+
+        .pricing-card .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        .pricing-card .price span {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .pricing-card .card-body {
+            padding: 30px;
+        }
+
+        .pricing-card ul {
+            margin-bottom: 30px;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .pricing-card ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-card ul li i {
+            color: var(--shuttle-blue);
+            margin-right: 10px;
+        }
+
+        .pricing-popular {
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            transform: rotate(45deg);
+            background-color: var(--shuttle-orange);
+            color: white;
+            padding: 5px 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /*============================================
+        * FLEET & SAFETY SECTION STYLES
+        =============================================*/
+        .fleet-section {
+            background-color: var(--light);
+        }
+
+        [data-bs-theme="dark"] .fleet-section {
+            background-color: rgba(33, 37, 41, 0.7);
+        }
+
+        .fleet-card {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .fleet-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .safety-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .safety-feature i {
+            font-size: 1.5rem;
+            color: var(--shuttle-blue);
+            margin-right: 15px;
+        }
+
+        /*============================================
+        * FAQ SECTION STYLES
+        =============================================*/
+        .faq-section .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-section .accordion-button:not(.collapsed) {
+            background-color: var(--shuttle-blue);
+            color: white;
+            box-shadow: none;
+        }
+
+        .faq-section .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        /*============================================
+        * FOOTER STYLES
+        =============================================*/
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 70px 0 20px;
+        }
+
+        .footer h5 {
+            font-weight: 700;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .footer h5:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--shuttle-orange);
+            left: 0;
+            bottom: -10px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color var(--transition-speed);
+        }
+
+        .footer-links li a:hover {
+            color: var(--shuttle-orange);
+        }
+
+        .footer .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            margin-right: 10px;
+            transition: all var(--transition-speed);
+        }
+
+        .footer .social-links a:hover {
+            background-color: var(--shuttle-orange);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 50px;
+        }
+
+        /*============================================
+        * BACK TO TOP BUTTON
+        =============================================*/
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--shuttle-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-speed);
+            cursor: pointer;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--shuttle-orange);
+            transform: translateY(-5px);
+        }
+
+        /*============================================
+        * MODAL & TOAST STYLES
+        =============================================*/
+        .booking-modal .modal-header {
+            background-color: var(--shuttle-blue);
+            color: white;
+        }
+
+        /* Theme Toggle Style */
+        .theme-toggle {
+            cursor: pointer;
+            position: relative;
+            margin-left: 15px;
+            width: 50px;
+            height: 26px;
+            border-radius: 15px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            transition: background-color var(--transition-speed);
+        }
+
+        .theme-toggle.active {
+            background-color: var(--shuttle-blue);
+        }
+
+        .theme-toggle-circle {
+            position: absolute;
+            left: 3px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            transition: transform var(--transition-speed);
+        }
+
+        .theme-toggle.active .theme-toggle-circle {
+            transform: translateX(24px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                margin-bottom: 40px;
+            }
+
+            .counter-box {
+                margin-bottom: 20px;
+            }
+
+            .pricing-card {
+                margin-bottom: 30px;
+            }
+
+            .footer {
+                padding: 50px 0 20px;
+            }
+
+            .footer-column {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Shuttle<span>X</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#routes">Routes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#schedule">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fleet">Fleet & Safety</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-shuttle ms-lg-3" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <div id="themeToggle" class="theme-toggle">
+                            <div class="theme-toggle-circle"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 fade-in">
+                    <h1>Premium Corporate Shuttle Service</h1>
+                    <p>Experience comfortable, reliable, and sustainable commuting solutions for the Hyderabad IT corridor. Reduce stress and increase productivity with ShuttleX.</p>
+                    <button class="btn btn-light btn-lg me-3" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Your Ride</button>
+                    <a href="#routes" class="btn btn-outline-light btn-lg">View Routes</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-md-6 fade-in">
+                            <div class="counter-box">
+                                <div class="counter" data-target="15000">0</div>
+                                <h5>Daily Commuters</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6 fade-in">
+                            <div class="counter-box">
+                                <div class="counter" data-target="35">0</div>
+                                <h5>IT Parks Covered</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6 fade-in">
+                            <div class="counter-box">
+                                <div class="counter" data-target="98">0</div>
+                                <h5>On-Time Rate (%)</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6 fade-in">
+                            <div class="counter-box">
+                                <div class="counter" data-target="250">0</div>
+                                <h5>Modern Vehicles</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div class="section-title text-center fade-in">
+                <h2>Our Services</h2>
+                <p class="lead">Comprehensive commuting solutions tailored for corporate professionals</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 fade-in">
+                    <div class="card service-card card-hover h-100">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="bi bi-building"></i>
+                            </div>
+                            <h4>Corporate Shuttles</h4>
+                            <p>Dedicated shuttle services for companies with multiple pickup and drop points across Hyderabad. Customize schedules according to your company's working hours.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-in">
+                    <div class="card service-card card-hover h-100">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="bi bi-calendar-check"></i>
+                            </div>
+                            <h4>Subscription Plans</h4>
+                            <p>Flexible monthly and annual subscription plans for individuals working in IT parks. Save money and ensure a guaranteed seat on your daily commute.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-in">
+                    <div class="card service-card card-hover h-100">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <h4>Premium Experience</h4>
+                            <p>Enjoy WiFi, comfortable seating, charging points, and climate control in all our vehicles. Track your shuttle in real-time with our mobile application.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-in">
+                    <div class="card service-card card-hover h-100">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h4>Safety First</h4>
+                            <p>All vehicles equipped with GPS tracking, CCTV cameras, and emergency response systems. Trained drivers and regular vehicle maintenance ensure your safety.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-in">
+                    <div class="card service-card card-hover h-100">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="bi bi-tree"></i>
+                            </div>
+                            <h4>Eco-Friendly</h4>
+                            <p>Reduce your carbon footprint by sharing rides. Our newer fleet includes electric and CNG vehicles contributing to a greener Hyderabad.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-in">
+                    <div class="card service-card card-hover h-100">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h4>Event Transportation</h4>
+                            <p>Special shuttle arrangements for corporate events, conferences, and team outings. Custom routes and schedules to meet your specific requirements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Routes Section -->
+    <section id="routes" class="routes-section section-padding">
+        <div class="container">
+            <div class="section-title text-center fade-in">
+                <h2>Our Routes</h2>
+                <p class="lead">Strategic routes covering major residential areas and IT parks</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 fade-in">
+                    <div class="card route-card card-hover h-100">
+                        <div class="route-header">
+                            <div class="route-letter">A</div>
+                            <div>
+                                <h4>Western Route</h4>
+                                <p class="mb-0">Kukatpally to HITEC City</p>
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="route-stop">
+                                <h6>Kukatpally Housing Board</h6>
+                                <p class="text-muted mb-0">Starting Point (6:30 AM)</p>
+                            </div>
+                            <div class="route-stop">
+                                <h6>JNTU Kukatpally</h6>
+                                <p class="text-muted mb-0">6:40 AM</p>
+                            </div>
+                            <div class="route-stop">
+                                <h6>Malaysian Township</h6>
+                                <p class="text-muted mb-0">6:55 AM</p>
+                            </div>
+                            <div class="route-stop">
+                                <h6>Miyapur X Roads</h6>
+                                <p class="text-muted mb-0">7:10 AM</p>
+                            </div>
+                            <div class="route-stop">
+                                <h6>Kondapur</h6>
+                                <p class="text-muted mb-0">7:30 AM</p>
+                            </div>
+                            <div class="route-stop">
+                                <h6>HITEC City</h6>
+                                <p class="text-muted mb-0">Final Destination (7:50 AM)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 fade-in">
+                    <div class="card route-card card-hover h-100">
+                        <div class="route-header">
+                            <div class="route-letter">B</div>
+                            <div>
+                                <h4>Eastern Route</h4>
+                                <p class="mb-0">Uppal to Gachibowli</p>
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="route-stop">
+                                <h6>Uppal Bus Station</h6>
+                                <p class="text-muted mb-0">Starting Point (6:15 AM)</p>
+                            </div>
+                            <div class="route-stop">
+                                <h6>Nagole Metro Station</h6>
+                                <p class="text-muted mb-0">6:30 AM</p>
+                            </div>
+                            <div class="route-stop">
+                                <h6>LB Nagar Junction</h6>
+                                <p class="text-muted mb-0">6:45 AM</p>
+                            </div>
+                            <div class="route-stop">
+                                <h6>Dilsukhnagar</h6>
+                                <p class="text-muted mb-0">7:00 AM</p>
+                            </div>
+                            <div class="route-stop">
+                                <h6>Mehdipatnam</h6>
+                                <p class="text-muted mb-0">7:25 AM</p>
+                            </div>
+                            <div class="route-stop">
+                                <h6>Gachibowli</h6>
+                                <p class="text-muted mb-0">Final Destination (7:55 AM)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 fade-in">
+                    <div class="card route-card card-hover h-100">
+                        <div class="route-header">
+                            <div class="route-letter">C</div>
+                            <div>
+                                <h4>Northern Route</h4>
+                                <p class="mb-0">Secunderabad to Financial District</p>
+                            </div>
+                        </div>
+                        <div class="route-stops">
+                            <div class="route-stop">
+                                <h6>Secunderabad Station</h6>
+                                <p class="text-muted mb-0">Starting Point (6:20 AM)</p>
+                            </div>
+                            <div class="route-stop">
+                                <h6>Paradise Circle</h6>
+                                <p class="text-muted mb-0">6:30 AM</p>
+                            </div>
+                            <div class="route-stop">
