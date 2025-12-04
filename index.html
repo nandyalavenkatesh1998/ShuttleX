@@ -9,629 +9,8 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <style>
-        /*============================================
-        * GENERAL STYLES
-        =============================================*/
-        :root {
-            --primary: #0d6efd;
-            --primary-dark: #0b5ed7;
-            --secondary: #6c757d;
-            --light: #f8f9fa;
-            --dark: #212529;
-            --shuttle-blue: #1d4ed8;
-            --shuttle-orange: #f59e0b;
-            --transition-speed: 0.3s;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 70px; /* Accounts for the fixed navbar */
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            transition: background-color var(--transition-speed);
-        }
-
-        .text-shuttle-blue {
-            color: var(--shuttle-blue);
-        }
-        
-        .bg-shuttle-blue {
-            background-color: var(--shuttle-blue);
-        }
-        
-        .text-shuttle-orange {
-            color: var(--shuttle-orange);
-        }
-        
-        .bg-shuttle-orange {
-            background-color: var(--shuttle-orange);
-        }
-
-        .section-padding {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-weight: 700;
-            position: relative;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        .section-title h2:after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 3px;
-            background-color: var(--shuttle-orange);
-            bottom: -10px;
-            left: 25%;
-        }
-
-        /* Button Styles */
-        .btn-shuttle {
-            background-color: var(--shuttle-blue);
-            color: white;
-            border: none;
-            transition: all var(--transition-speed);
-            font-weight: 600;
-        }
-
-        .btn-shuttle:hover, .btn-shuttle:focus {
-            background-color: var(--primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Card hover effect */
-        .card-hover {
-            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Animation for elements */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .fade-in.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /*============================================
-        * NAVBAR STYLES
-        =============================================*/
-        .navbar {
-            transition: all var(--transition-speed);
-            padding: 15px 0;
-        }
-
-        .navbar.scrolled {
-            padding: 10px 0;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-
-        .navbar-brand span {
-            color: var(--shuttle-orange);
-        }
-
-        .navbar-nav .nav-link {
-            color: var(--dark);
-            font-weight: 600;
-            margin: 0 10px;
-            transition: color var(--transition-speed);
-        }
-
-        [data-bs-theme="dark"] .navbar-nav .nav-link {
-            color: var(--light);
-        }
-
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-            color: var(--shuttle-orange);
-        }
-
-        /*============================================
-        * HERO SECTION STYLES
-        =============================================*/
-        .hero {
-            position: relative;
-            background: linear-gradient(rgba(29, 78, 216, 0.85), rgba(29, 78, 216, 0.85)), 
-                        url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YnVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 180px 0 100px;
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        .counter-box {
-            text-align: center;
-            padding: 20px 0;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            margin-top: 30px;
-        }
-
-        .counter-box .counter {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--shuttle-orange);
-        }
-
-        .counter-box h5 {
-            font-size: 1rem;
-            margin-top: 10px;
-        }
-
-        /*============================================
-        * SERVICES SECTION STYLES
-        =============================================*/
-        .service-card {
-            border: none;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 30px;
-        }
-
-        .service-card .card-body {
-            padding: 25px;
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--shuttle-blue);
-            margin-bottom: 20px;
-        }
-
-        /*============================================
-        * ROUTES SECTION STYLES
-        =============================================*/
-        .routes-section {
-            background-color: var(--light);
-        }
-        
-        [data-bs-theme="dark"] .routes-section {
-            background-color: rgba(33, 37, 41, 0.7);
-        }
-
-        .route-card {
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-
-        .route-card .route-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .route-card .route-header .route-letter {
-            width: 60px;
-            height: 60px;
-            background-color: var(--shuttle-blue);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-right: 20px;
-        }
-
-        .route-stops {
-            margin-top: 20px;
-            position: relative;
-        }
-
-        .route-stop {
-            padding-left: 30px;
-            position: relative;
-            margin-bottom: 15px;
-        }
-
-        .route-stop:before {
-            content: '';
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            background-color: var(--shuttle-blue);
-            border-radius: 50%;
-            left: 0;
-            top: 5px;
-        }
-
-        .route-stop:after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            background-color: var(--shuttle-blue);
-            top: 18px;
-            bottom: -15px;
-            left: 5px;
-        }
-
-        .route-stop:last-child:after {
-            display: none;
-        }
-
-        /*============================================
-        * SCHEDULE SECTION STYLES
-        =============================================*/
-        .schedule-section .nav-pills .nav-link {
-            border-radius: 50px;
-            padding: 10px 20px;
-            margin: 5px;
-            font-weight: 600;
-        }
-
-        .schedule-section .nav-pills .nav-link.active {
-            background-color: var(--shuttle-blue);
-        }
-
-        .schedule-table {
-            margin-top: 30px;
-        }
-
-        .schedule-table th {
-            background-color: var(--shuttle-blue);
-            color: white;
-            font-weight: 600;
-        }
-
-        .schedule-row {
-            transition: all var(--transition-speed);
-        }
-
-        .schedule-row:hover {
-            background-color: rgba(29, 78, 216, 0.05);
-        }
-
-        /*============================================
-        * PRICING SECTION STYLES
-        =============================================*/
-        .pricing-switch {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
-
-        .pricing-switch .form-check-input {
-            width: 60px;
-            height: 30px;
-            margin: 0 10px;
-        }
-
-        .pricing-card {
-            border-radius: 10px;
-            overflow: hidden;
-            transition: all var(--transition-speed);
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .pricing-card .card-header {
-            background-color: var(--shuttle-blue);
-            color: white;
-            text-align: center;
-            padding: 25px 15px;
-        }
-
-        .pricing-card .card-header h3 {
-            margin-bottom: 0;
-            font-weight: 700;
-        }
-
-        .pricing-card .price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin: 20px 0;
-        }
-
-        .pricing-card .price span {
-            font-size: 1rem;
-            font-weight: 400;
-        }
-
-        .pricing-card .card-body {
-            padding: 30px;
-        }
-
-        .pricing-card ul {
-            margin-bottom: 30px;
-            padding-left: 0;
-            list-style: none;
-        }
-
-        .pricing-card ul li {
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-        }
-
-        .pricing-card ul li i {
-            color: var(--shuttle-blue);
-            margin-right: 10px;
-        }
-
-        .pricing-popular {
-            position: absolute;
-            top: 15px;
-            right: -30px;
-            transform: rotate(45deg);
-            background-color: var(--shuttle-orange);
-            color: white;
-            padding: 5px 40px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        /*============================================
-        * FLEET & SAFETY SECTION STYLES
-        =============================================*/
-        .fleet-section {
-            background-color: var(--light);
-        }
-
-        [data-bs-theme="dark"] .fleet-section {
-            background-color: rgba(33, 37, 41, 0.7);
-        }
-
-        .fleet-card {
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 30px;
-        }
-
-        .fleet-card img {
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .safety-feature {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-
-        .safety-feature i {
-            font-size: 1.5rem;
-            color: var(--shuttle-blue);
-            margin-right: 15px;
-        }
-
-        /*============================================
-        * FAQ SECTION STYLES
-        =============================================*/
-        .faq-section .accordion-item {
-            margin-bottom: 15px;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .faq-section .accordion-button:not(.collapsed) {
-            background-color: var(--shuttle-blue);
-            color: white;
-            box-shadow: none;
-        }
-
-        .faq-section .accordion-button:focus {
-            box-shadow: none;
-        }
-
-        /*============================================
-        * FOOTER STYLES
-        =============================================*/
-        .footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 70px 0 20px;
-        }
-
-        .footer h5 {
-            font-weight: 700;
-            margin-bottom: 25px;
-            position: relative;
-        }
-
-        .footer h5:after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 2px;
-            background-color: var(--shuttle-orange);
-            left: 0;
-            bottom: -10px;
-        }
-
-        .footer-links {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .footer-links li {
-            margin-bottom: 15px;
-        }
-
-        .footer-links li a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: color var(--transition-speed);
-        }
-
-        .footer-links li a:hover {
-            color: var(--shuttle-orange);
-        }
-
-        .footer .social-links a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            color: white;
-            margin-right: 10px;
-            transition: all var(--transition-speed);
-        }
-
-        .footer .social-links a:hover {
-            background-color: var(--shuttle-orange);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 20px;
-            margin-top: 50px;
-        }
-
-        /*============================================
-        * BACK TO TOP BUTTON
-        =============================================*/
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background-color: var(--shuttle-blue);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            z-index: 999;
-            opacity: 0;
-            visibility: hidden;
-            transition: all var(--transition-speed);
-            cursor: pointer;
-        }
-
-        .back-to-top.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background-color: var(--shuttle-orange);
-            transform: translateY(-5px);
-        }
-
-        /*============================================
-        * MODAL & TOAST STYLES
-        =============================================*/
-        .booking-modal .modal-header {
-            background-color: var(--shuttle-blue);
-            color: white;
-        }
-
-        /* Theme Toggle Style */
-        .theme-toggle {
-            cursor: pointer;
-            position: relative;
-            margin-left: 15px;
-            width: 50px;
-            height: 26px;
-            border-radius: 15px;
-            background-color: #ddd;
-            display: flex;
-            align-items: center;
-            transition: background-color var(--transition-speed);
-        }
-
-        .theme-toggle.active {
-            background-color: var(--shuttle-blue);
-        }
-
-        .theme-toggle-circle {
-            position: absolute;
-            left: 3px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: white;
-            transition: transform var(--transition-speed);
-        }
-
-        .theme-toggle.active .theme-toggle-circle {
-            transform: translateX(24px);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 992px) {
-            .section-padding {
-                padding: 60px 0;
-            }
-
-            .hero {
-                padding: 120px 0 60px;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .section-title {
-                margin-bottom: 40px;
-            }
-
-            .counter-box {
-                margin-bottom: 20px;
-            }
-
-            .pricing-card {
-                margin-bottom: 30px;
-            }
-
-            .footer {
-                padding: 50px 0 20px;
-            }
-
-            .footer-column {
-                margin-bottom: 30px;
-            }
-        }
+        /* Your existing styles here... */
+        /* Add your existing CSS styles here */
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar">
@@ -805,107 +184,221 @@
         </div>
     </section>
 
-    <!-- Routes Section -->
-    <section id="routes" class="routes-section section-padding">
+    <!-- New Sections Start Here -->
+
+    <!-- Customer Testimonials Section -->
+    <section id="testimonials" class="section-padding bg-light">
         <div class="container">
             <div class="section-title text-center fade-in">
-                <h2>Our Routes</h2>
-                <p class="lead">Strategic routes covering major residential areas and IT parks</p>
+                <h2>What Our Customers Say</h2>
+                <p class="lead">Hear from our satisfied riders</p>
             </div>
-
             <div class="row">
-                <div class="col-lg-4 fade-in">
-                    <div class="card route-card card-hover h-100">
-                        <div class="route-header">
-                            <div class="route-letter">A</div>
-                            <div>
-                                <h4>Western Route</h4>
-                                <p class="mb-0">Kukatpally to HITEC City</p>
-                            </div>
-                        </div>
-                        <div class="route-stops">
-                            <div class="route-stop">
-                                <h6>Kukatpally Housing Board</h6>
-                                <p class="text-muted mb-0">Starting Point (6:30 AM)</p>
-                            </div>
-                            <div class="route-stop">
-                                <h6>JNTU Kukatpally</h6>
-                                <p class="text-muted mb-0">6:40 AM</p>
-                            </div>
-                            <div class="route-stop">
-                                <h6>Malaysian Township</h6>
-                                <p class="text-muted mb-0">6:55 AM</p>
-                            </div>
-                            <div class="route-stop">
-                                <h6>Miyapur X Roads</h6>
-                                <p class="text-muted mb-0">7:10 AM</p>
-                            </div>
-                            <div class="route-stop">
-                                <h6>Kondapur</h6>
-                                <p class="text-muted mb-0">7:30 AM</p>
-                            </div>
-                            <div class="route-stop">
-                                <h6>HITEC City</h6>
-                                <p class="text-muted mb-0">Final Destination (7:50 AM)</p>
-                            </div>
+                <div class="col-md-4 fade-in">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <p class="card-text">"ShuttleX has transformed my daily commute. The service is reliable and the drivers are friendly!"</p>
+                            <h5 class="card-title">- Priya S.</h5>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 fade-in">
-                    <div class="card route-card card-hover h-100">
-                        <div class="route-header">
-                            <div class="route-letter">B</div>
-                            <div>
-                                <h4>Eastern Route</h4>
-                                <p class="mb-0">Uppal to Gachibowli</p>
-                            </div>
-                        </div>
-                        <div class="route-stops">
-                            <div class="route-stop">
-                                <h6>Uppal Bus Station</h6>
-                                <p class="text-muted mb-0">Starting Point (6:15 AM)</p>
-                            </div>
-                            <div class="route-stop">
-                                <h6>Nagole Metro Station</h6>
-                                <p class="text-muted mb-0">6:30 AM</p>
-                            </div>
-                            <div class="route-stop">
-                                <h6>LB Nagar Junction</h6>
-                                <p class="text-muted mb-0">6:45 AM</p>
-                            </div>
-                            <div class="route-stop">
-                                <h6>Dilsukhnagar</h6>
-                                <p class="text-muted mb-0">7:00 AM</p>
-                            </div>
-                            <div class="route-stop">
-                                <h6>Mehdipatnam</h6>
-                                <p class="text-muted mb-0">7:25 AM</p>
-                            </div>
-                            <div class="route-stop">
-                                <h6>Gachibowli</h6>
-                                <p class="text-muted mb-0">Final Destination (7:55 AM)</p>
-                            </div>
+                <div class="col-md-4 fade-in">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <p class="card-text">"I love the convenience of booking my rides through the app. Highly recommend!"</p>
+                            <h5 class="card-title">- Rajesh K.</h5>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 fade-in">
-                    <div class="card route-card card-hover h-100">
-                        <div class="route-header">
-                            <div class="route-letter">C</div>
-                            <div>
-                                <h4>Northern Route</h4>
-                                <p class="mb-0">Secunderabad to Financial District</p>
-                            </div>
+                <div class="col-md-4 fade-in">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <p class="card-text">"The safety measures in place make me feel secure while traveling. Great job, ShuttleX!"</p>
+                            <h5 class="card-title">- Anjali M.</h5>
                         </div>
-                        <div class="route-stops">
-                            <div class="route-stop">
-                                <h6>Secunderabad Station</h6>
-                                <p class="text-muted mb-0">Starting Point (6:20 AM)</p>
-                            </div>
-                            <div class="route-stop">
-                                <h6>Paradise Circle</h6>
-                                <p class="text-muted mb-0">6:30 AM</p>
-                            </div>
-                            <div class="route-stop">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section-padding">
+        <div class="container">
+            <div class="section-title text-center fade-in">
+                <h2>How It Works</h2>
+                <p class="lead">Simple steps to book your ride</p>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4 fade-in">
+                    <div class="icon">
+                        <i class="bi bi-calendar-check" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4>Step 1: Choose Your Route</h4>
+                    <p>Select your preferred route from our list of available options.</p>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="icon">
+                        <i class="bi bi-person-check" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4>Step 2: Book Your Ride</h4>
+                    <p>Book your ride through our website or mobile app in just a few clicks.</p>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="icon">
+                        <i class="bi bi-check-circle" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4>Step 3: Enjoy Your Ride</h4>
+                    <p>Relax and enjoy a comfortable ride to your destination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Section -->
+    <section id="promotions" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title text-center fade-in">
+                <h2>Current Promotions</h2>
+                <p class="lead">Don't miss out on our special offers!</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 fade-in">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">20% Off Your First Ride</h5>
+                            <p class="card-text">Use code <strong>FIRST20</strong> at checkout.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 fade-in">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Refer a Friend</h5>
+                            <p class="card-text">Get ₹100 for every friend you refer who books a ride!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Measures Section -->
+    <section id="safety" class="section-padding">
+        <div class="container">
+            <div class="section-title text-center fade-in">
+                <h2>Safety First</h2>
+                <p class="lead">Your safety is our top priority</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 fade-in">
+                    <div class="safety-feature">
+                        <i class="bi bi-shield-check" style="font-size: 2rem;"></i>
+                        <div>
+                            <h5>GPS Tracking</h5>
+                            <p>All vehicles are equipped with GPS for real-time tracking.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="safety-feature">
+                        <i class="bi bi-camera" style="font-size: 2rem;"></i>
+                        <div>
+                            <h5>CCTV Cameras</h5>
+                            <p>Our vehicles are monitored with CCTV for added security.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="safety-feature">
+                        <i class="bi bi-person-check" style="font-size: 2rem;"></i>
+                        <div>
+                            <h5>Trained Drivers</h5>
+                            <p>All drivers undergo rigorous training and background checks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faq" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title text-center fade-in">
+                <h2>Frequently Asked Questions</h2>
+                <p class="lead">Got questions? We have answers!</p>
+            </div>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            How do I book a ride?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can book a ride through our website or mobile app by selecting your route and preferred time.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            What payment methods do you accept?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We accept various payment methods including credit/debit cards, UPI, and cash.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Can I cancel my booking?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, you can cancel your booking through the app or website. Please check our cancellation policy for details.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Existing Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <h5>Contact Us</h5>
+            <ul class="footer-links">
+                <li><a href="mailto:info@shuttlex.com">info@shuttlex.com</a></li>
+                <li><a href="tel:+911234567890">+91 123 456 7890</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShuttleX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Your existing JavaScript here...
+    </script>
+</body>
+</html>
